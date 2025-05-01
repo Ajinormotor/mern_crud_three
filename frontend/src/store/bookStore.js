@@ -1,7 +1,7 @@
 import { create } from "zustand"
 import axios from "axios"
 
-const APi_URL = "http://localhost:5000/api/books"
+const APi_URL = "https://mern-crud-three.onrender.com/api/books"
 axios.defaults.withCredentials = true
 
 

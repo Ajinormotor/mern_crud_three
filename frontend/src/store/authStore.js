@@ -2,7 +2,7 @@ import axios from 'axios'
 import { create } from 'zustand'
 
 
-const API_URL = "http://localhost:5000/api"
+const API_URL = "https://mern-crud-three.onrender.com/api"
 axios.defaults.withCredentials = true
 
 export const useAuthStore = create((set) => ({

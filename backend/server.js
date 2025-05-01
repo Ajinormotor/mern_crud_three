@@ -29,7 +29,7 @@ console.log(process.env.MONGO_URL);
 
 app.use(express.json({ limit: "20mb"}));
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://mern-crud-three.onrender.com",
     methods: "GET,POST,PUT,DELETE",
     credentials: true
 }))
