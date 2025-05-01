@@ -24,7 +24,7 @@ cloudinary.config({
 })
 
 const app = express()
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 console.log(process.env.MONGO_URL);
 
 app.use(express.json({ limit: "20mb"}));
@@ -41,7 +41,7 @@ app.use('/api/auth', userRoutes)
 app.use('/api/books', bookRoutes)
 
 if(process.env.NODE_ENV === 'production'){
-    app.use.express.static(path.join(__dirname, "/frontend/dist"))
+    app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
     app.get("*", (req,res)=> {
         res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
