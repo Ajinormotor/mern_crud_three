@@ -41,7 +41,7 @@ const {fetchBooks, book} = useBookStore()
 
 useEffect(() => {
   fetchBooks(params.id)
-}, [fetchBooks])
+}, [fetchBooks, params.id])
 
 useEffect(() => {
     if(book){
